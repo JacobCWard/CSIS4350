@@ -10,14 +10,14 @@ github: The project is called {{ site.github.project_title }}
 # Site settings
 title: CSIS 4350 (Web Programming) Homework
 email: jacobward1898@gmail.com
+timezone: America/Denver
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  This website is used to display my homework assignments for my CSIS 4350 (Web Programming) class at Southern Utah University. To see some of my other work, please visit my GitHub profile.
 baseurl: "/CSIS4350" # the subpath of your site, e.g. /blog
 url: "http://jacobcward.com/CSIS4350" # the base hostname & protocol for your site
 twitter_username: JacobCWard
 github_username:  JacobCWard
+linkedin_username: JacobCWard
 
 # Build settings
 markdown: kramdown
