@@ -20,4 +20,6 @@ github_username:  JacobCWard
 linkedin_username: JacobCWard
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+redcarpet:
+  extensions: ["strikethrough"] 
