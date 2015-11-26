@@ -18,9 +18,8 @@ url: "http://jacobcward.com/CSIS4350" # the base hostname & protocol for your si
 twitter_username: JacobCWard
 github_username:  JacobCWard
 linkedin_username: JacobCWard
-author: Jacob C. Ward
 
 # Build settings
 markdown: redcarpet
 redcarpet:
-  extensions: ["strikethrough"]
+  extensions: ["strikethrough"] 
