@@ -5,22 +5,143 @@ categories: week02
 permalink: /week02/01/
 ---
 
-<p>8,11,12,13</p>
+<div class="row">
+    <div class="col-md-12">
+        <h4><a href="../">Week 2 Index</a></h4>
+        <h1>Week 02 - 01</h1>
+        <h2>Chapter 4, ex. 4.8, 4.11, 4.12, 4.13.</h2>
+    </div>
+</div>
+<h3>4.8</h3>
+<div class="well">
+    <div class="row">
+        <div class="col-sm-2">
+            <h5>Function:</h5>
+            <p><code>no_zeros</code></p>
+        </div>
+        <div class="col-sm-2">
+            <h5>Parameter:</h5>
+            <p>An array of numbers</p>
+        </div>
+        <div class="col-sm-4">
+            <h5>Result:</h5>
+            <p>The given array must be modified to remove all zero values.</p>
+        </div>
+        <div class="col-sm-4">
+            <h5>Returns:</h5>
+            <p><code>true</code> if the given array included zero values, <code>false</code> otherwise.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-5">
+            <textarea id="input8" class="form-control" rows="3" placeholder="Input">[0,2,4,6,0,1]</textarea>
+        </div>
+        <div class="col-sm-2" style="min-height:46px;">
+            <a class="btn btn-primary btn-lg col-xs-12" id="button8" href="javascript:void(0); "role="button" onclick="document.getElementById('output8').value = no_zeros(document.getElementById('input8').value)">Submit</a>
+        </div>
+        <div class="col-sm-5">
+            <textarea id="output8" class="form-control" rows="3" readonly></textarea>
+        </div>
+        <script type="text/javascript" src="{{ "/scripts/week02.js" | prepend: site.baseurl }}"></script>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>Script: <small>(if returning modified array)</small></h5>
+            {% highlight js linenos %}
+function no_zeros(input){
+    var rm = new Array();
+    var b = false;
+    for (a in input){
+        if (input[a] === 0){
+            rm.push(a);
+            b = true;
+        }
+    }
+    rm.reverse();
+    for (a in rm){
+        input.splice(rm[a], 1);
+    }
+    return b + ", " + input
+}
+        {% endhighlight %}
+        </div>
+        <div class="col-sm-6">
+            <h5>Script: <small>(if returning only <code>true</code> or <code>false</code>)</small></h5>
+            {% highlight js linenos %}
+function no_zeros(input){
+    for (a in input){
+        if (input[a] === 0){
+            return true;
+        }
+    }
+    return false;
+}
+            {% endhighlight %}
+        </div>
+    </div>
+</div>
+<h3>4.11</h3>
+<div class="well">
+    <div class="row">
+        <div class="col-sm-2">
+            <h5>Function:</h5>
+            <p><code>counter</code></p>
+        </div>
+        <div class="col-sm-2">
+            <h5>Parameter:</h5>
+            <p>An array of numbers.</p>
+        </div>
+        <div class="col-sm-8">
+            <h5>Returns:</h5>
+            <p>The numbers of negative elements, zeros, and values greater than zero in a given array.</p>
+            <p><em>Note:</em> You must use a <code>switch</code> statement in the function.<p>
+            </div>
+        </div>
+    </div>
+    <h3>4.12</h3>
+    <div class="well">
+        <div class="row">
+            <div class="col-sm-2">
+                <h5>Function:</h5>
+                <p><code>tst_name</code></p>
+            </div>
+            <div class="col-sm-2">
+                <h5>Parameter:</h5>
+                <p>An string.</p>
+            </div>
+            <div class="col-sm-8">
+                <h5>Returns:</h5>
+                <p><code>true</code> if the given string has the form: <code>string1, string2 letter</code> where both string must be all lowercase letters except for the first letter and <code>letter</code> must be uppercase; <code>false</code> otherwise.</p>
+            </div>
+        </div>
+    </div>
+    <h3>4.13</h3>
+    <div class="well">
+        <div class="row">
+            <div class="col-sm-2">
+                <h5>Function:</h5>
+                <p><code>row_averages</code></p>
+            </div>
+            <div class="col-sm-2">
+                <h5>Parameter:</h5>
+                <p>An array of arrays of numbers.</p>
+            </div>
+            <div class="col-sm-8">
+                <h5>Returns:</h5>
+                <p>An array of the averages of each of the rows of the given matrix.</p>
+            </div>
+        </div>
+    </div>
 
-<h3>8</h3>
-<h3>11</h3>
-<h3>12</h3>
-<h3>13</h3>
-
-{% highlight html linenos %}
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Hello World</title>
-</head>
-<body>
-    <h1>Hello World</h1>
-</body>
-</html>
-{% endhighlight %}
+    {% highlight html linenos %}
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hello World</title>
+    </head>
+    <body>
+        <h1>Hello World</h1>
+    </body>
+    </html>
+    {% endhighlight %}
