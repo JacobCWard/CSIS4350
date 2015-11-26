@@ -11,3 +11,8 @@ $spacing-unit:     30px;
 @import
         "syntax-highlighting"
 ;
+
+.contact-list,
+.social-media-list {
+  list-style: none;
+  margin-left: 0; }
