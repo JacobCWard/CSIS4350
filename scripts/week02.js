@@ -72,7 +72,27 @@ function row_averages(inputA) {
         for (j in input[i]) {
             k += input[i][j];
         }
+        k = k/input[i].length;
         arr.push(k);
     }
     return JSON.stringify(arr);
+}
+
+function cube(x) {
+    c = Math.pow(x,3);
+    return c;
+}
+
+function cube_range() {
+    arr = _.range(1,21);
+    cubes = new Array();
+    for (i in arr){
+        var j = cube(arr[i]);
+        cubes.push(j);
+    }
+    return cubes;
+}
+
+function capitalizeAll(input){
+    return input.toUpperCase();
 }

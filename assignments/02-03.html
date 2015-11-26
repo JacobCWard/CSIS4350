@@ -1,0 +1,39 @@
+---
+layout: bootstrappypage
+title:  "Week 02-03"
+categories: week02
+permalink: /week02/03/
+---
+
+<script type="text/javascript" src="{{ "/scripts/week02.js" | prepend: site.baseurl }}"></script>
+
+<div class="row">
+    <div class="col-md-12">
+        <h4><a href="../">Week 2 Index</a></h4>
+        <h1>Week 02 - 03</h1>
+        <h2>Write a function called “capitalizeAll” that takes a string and capitalizes it.</h2>
+    </div>
+</div>
+<div class="well">
+    <div class="row">
+        <div class="col-sm-5">
+            <textarea id="inputA" class="form-control" rows="3" placeholder="Input">southern Utah UnivErsity</textarea>
+        </div>
+        <div class="col-sm-2" style="min-height:46px;">
+            <a class="btn btn-primary btn-lg col-xs-12" id="buttonA" href="javascript:void(0); "role="button" onclick="document.getElementById('outputA').value = capitalizeAll(document.getElementById('inputA').value)">Submit</a>
+        </div>
+        <div class="col-sm-5">
+            <textarea id="outputA" class="form-control" rows="3" readonly placeholder="Output"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h5><code>capitalizeAll(input)</code></h5>
+            {% highlight js linenos %}
+function capitalizeAll(input){
+    return input.toUpperCase();
+}
+            {% endhighlight %}
+        </div>
+    </div>
+</div>
