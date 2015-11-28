@@ -1,0 +1,149 @@
+---
+layout: bootstrappypage
+title:  "Week 02-05"
+categories: week02
+permalink: /week02/05/
+---
+
+<div class="row">
+    <div class="col-md-12">
+        <h4><a href="../">Week 2 Index</a></h4>
+        <h1>Week 02 - 05</h1>
+        <div class="well">
+            <h2>Create and test a webpage with these elements:</h2>
+            <ul>
+                <li><a href="#videoElement">A video element using a different video than what is used in the template.</a></li>
+                <li><a href="#form">a form</a></li>
+                <li><a href="#meter">a meter</a></li>
+                <li><a href="#paragraphs">paragraphs</a></li>
+                <li><a href="#characterEntities">All the character entities on p. 48 of the text (ex. &amp;amp).</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="well" id="videoElement">
+            <h2>Video</h2>
+            <video class="img-responsive" src="http://jacobcward.com/Rick Astley - Never Gonna Give You Up.mp4" controls/>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="well" id="form">
+            <h2>Form</h2>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2" for="nameField">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="nameField" placeholder="Thor Thunderbird" value="Thor Thunderbird">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2" for="emailField">Email Address</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="emailField" placeholder="thor@thunderbird.com" value="thor@thunderbird.com">
+                    </div>
+                </div>
+                <a class="btn btn-primary" id="buttonA" href="javascript:void(0);" role="button" onclick="(document.getElementById('nameOutput').innerHTML = document.getElementById('nameField').value); (document.getElementById('emailOutput').innerHTML = document.getElementById('emailField').value)">Submit</a>
+            </form>
+            <br>
+            <p>Name: <span id="nameOutput"></span></p>
+            <p>Email Address: <span id="emailOutput"></span></p>
+        </div>
+    </div>
+</div>
+<div class="row">
+
+    <div class="col-sm-6">
+        <div class="well" id="paragraphs">
+            <h2>Paragraphs</h2>
+            <p><span class="lead">This has not been a scientist's war; it has been a war in which all have had a part.</span><br>The scientists, burying their old professional competition in the demand of a common cause, have shared greatly and learned much. It has been exhilarating to work in effective partnership. Now, for many, this appears to be approaching an end. What are the scientists to do next?</p>
+            <p>For the biologists, and particularly for the medical scientists, there can be little indecision, for their war has hardly required them to leave the old paths. Many indeed have been able to carry on their war research in their familiar peacetime laboratories. Their objectives remain much the same.</p>
+            <p>It is the physicists who have been thrown most violently off stride, who have left academic pursuits for the making of strange destructive gadgets, who have had to devise new methods for their unanticipated assignments. They have done their part on the devices that made it possible to turn back the enemy, have worked in combined effort with the physicists of our allies. They have felt within themselves the stir of achievement. They have been part of a great team. Now, as peace approaches, one asks where they will find objectives worthy of their best.</p>
+            <p class="pull-right">From <em><a href="http://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/" target="_blank">As We May Think</a></em> in <em>The Atlantic</em> July 1945</p><br>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="well" id="meter">
+            <h2>Meter</h2>
+            <meter value="75" min="0" max="100" low="40" high="90" optimum="100" style="width:100%; height:25px;"></meter>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="well" id="characterEntities">
+            <h2>All the character entities on p. 48 of the text (ex. &amp;amp)</h2>
+            <br>
+            <table class="table">
+                <thead>
+                    <tr style="font-weight: bold;">
+                        <td>Character</td>
+                        <td>Entity</td>
+                        <td>Meaning</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&amp;</td>
+                        <td>&amp;amp;</td>
+                        <td>Ampersand</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;</td>
+                        <td>&amp;lt;</td>
+                        <td>Is less than</td>
+                    </tr>
+                    <tr>
+                        <td>&gt;</td>
+                        <td>&amp;gt;</td>
+                        <td>Is greater than</td>
+                    </tr>
+                    <tr>
+                        <td>&quot;</td>
+                        <td>&amp;quot;</td>
+                        <td>Double quote</td>
+                    </tr>
+                    <tr>
+                        <td>&apos;</td>
+                        <td>&amp;apos;</td>
+                        <td>Single quote (apostrophe)</td>
+                    </tr>
+                    <tr>
+                        <td>&frac14;</td>
+                        <td>&amp;frac14;</td>
+                        <td>One-quarter</td>
+                    </tr>
+                    <tr>
+                        <td>&frac12;</td>
+                        <td>&amp;frac12;</td>
+                        <td>One-half</td>
+                    </tr>
+                    <tr>
+                        <td>&frac34;</td>
+                        <td>&amp;frac34;</td>
+                        <td>Three-quarters</td>
+                    </tr>
+                    <tr>
+                        <td>&deg;</td>
+                        <td>&amp;deg;</td>
+                        <td>Degree</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&amp;nbsp;</td>
+                        <td>Nonbreaking space</td>
+                    </tr>
+                    <tr>
+                        <td>&copy;</td>
+                        <td>&amp;copy;</td>
+                        <td>Copyright</td>
+                    </tr>
+                    <tr>
+                        <td>&euro;</td>
+                        <td>&amp;euro;</td>
+                        <td>Euro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
