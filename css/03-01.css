@@ -1,0 +1,63 @@
+.container {
+    width: 97%;
+    height: 100%;
+    background: #bbb;
+    padding: 10px;
+}
+
+.box {
+    padding: 20px;
+    margin: 20px;
+    background: #777;
+    border: 5px solid #123456;
+    text-align: justify;
+    color: #eee;
+    line-height: 1.8;
+}
+
+.box-A {
+    width: 200px;
+    position: relative;
+    bottom: 500px;
+    left: 50%;
+    font: italic 10pt Consolas, monospace;
+}
+
+ul.weird-list {
+    float: right;
+    width: 50%;
+}
+
+td {
+    padding: 5px;
+}
+table, th, td {
+    border: 5px dotted #661111;
+}
+
+/* Styles from Bootstrap */
+code,kbd,pre,samp {
+    font-family: monospace,monospace;
+    font-size: 1em
+}
+
+code,kbd,pre,samp {
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace
+}
+
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px
+}
+
+pre code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 0
+}

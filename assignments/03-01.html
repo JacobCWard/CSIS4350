@@ -5,11 +5,88 @@ categories: week03
 permalink: /week03/01/
 ---
 <!--
-backgrounds  text properties      fonts      links        lists
-tables       borders              dimension  positioning  floating
-alignment    margins and padding
+[x] backgrounds  [x] text properties
+[x] fonts        [x] links
+[x] lists        [x] tables
+[x] borders      [x] dimension
+[x] positioning  [x] floating
+[x] alignment    [x] margins
+[x] padding
 
 effect on order in using a property list for margins and padding
 -->
-<!-- Ugh... this unstyled page is so ugly -->
-<h2><a href="../">Week 2 Index</a></h2>
+<!-- Ugh... this page is so ugly -->
+<h2><a href="../">Week 3 Index</a></h2>
+<h3 style="margin: 15px;">Create a single web page illustrating the following: backgrounds, text properties, fonts, links, lists, tables, borders, dimension, positioning, floating, alignment, margins, padding, and effect on order in using a property list for margins and padding.</h3>
+
+<div class="container">
+    <p>This div demonstrates <code>background</code>, <code>dimensions</code>, and <code>padding</code>.</p>
+    <div class="box">
+        <p>This div adds demonstration of <code>margins</code>, <code>borders</code>, text properties (<code>color</code>, and <code>line-height</code>), <code>alignment</code> (justify), . Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lectus velit, malesuada non sapien in, vestibulum tristique nunc. Etiam varius arcu dolor, sit amet varius elit sodales vitae. Curabitur aliquam, lorem convallis congue dictum, magna leo tristique eros, eu pretium arcu mi vitae leo. Nulla eros ligula, ornare at ornare at, sollicitudin quis dui. Cras et condimentum nulla. Ut aliquam ex vel purus dictum, sit amet gravida enim rutrum. Nunc sed dignissim mi. Vestibulum consectetur magna a mi tempus feugiat. Nulla posuere fermentum elit, eu consectetur libero porta eu.</p>
+    </div>
+    <div class="box">
+        <p>This div adds demonstration of:</p>
+        <ul class="weird-list">
+            <li><code>lists</code></li>
+            <li><code>floating</code></li>
+            <li><code>table</code></li>
+        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <td>Class</td>
+                    <td>Classroom</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CSIS 4350</td>
+                    <td>ELC 310</td>
+                </tr>
+                <tr>
+                    <td>MGMT 3180</td>
+                    <td>BU 203</td>
+                </tr>
+                <tr>
+                    <td>MGMT 4100</td>
+                    <td>BU 101</td>
+                </tr>
+                <tr>
+                    <td>MKTG 3010</td>
+                    <td>BU 102</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="box">
+        <p>Shorthand property declarations affect each of these:</p>
+        <ul>
+            <li>
+                Margins and Padding
+                <ul>
+                    <li>1 value: all sides the same</li>
+                    <li>2 values: first- top and bottom same, second- left and right same</li>
+                    <li>4 values: clockwise definition starting at top</li>
+                </ul>
+            </li>
+            <li>
+                Borders
+                <ul>
+                    <li>(in order) border-width, border-style, and border-color</li>
+                    <li>Ommitted values do not matter</li>
+                </ul>
+            </li>
+            <li>
+                Fonts
+                <ul>
+                    <li>(in order) font-style font-variant font-weight font-size/line-height font-family</li>
+                    <li>font-size and font-family are required. Other properties are default if not declared.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="box box-A">
+        <p>This div adds demonstration of <code>positioning</code> and <code>links</code>, and <code>fonts</code>.</p>
+        <p><a style="color: #dddddd" href="../">Week 3 Index</a></p>
+    </div>
+</div>
