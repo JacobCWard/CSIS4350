@@ -20,11 +20,12 @@ permalink: /week02/02/
             <textarea id="inputA" class="form-control" rows="4" placeholder="Input">3</textarea>
         </div>
         <div class="col-sm-2" style="min-height:46px;">
-            <a class="btn btn-primary btn-lg col-xs-12" id="buttonA" href="javascript:void(0); "role="button" onclick="(document.getElementById('outputA').value = cube(document.getElementById('inputA').value)); (document.getElementById('outputB').value = JSON.stringify(cube_range()))">Submit</a>
+            <a class="btn btn-primary col-xs-12" id="buttonA" href="javascript:void(0); "role="button" onclick="document.getElementById('outputA').value = cube(document.getElementById('inputA').value)">cube(input)</a>
+            <a class="btn btn-primary col-xs-12" id="buttonB" href="javascript:void(0); "role="button" onclick="document.getElementById('outputB').value = JSON.stringify(cube_range())">Cubes of <br>range(1,21)</a>
         </div>
         <div class="col-sm-5">
             <textarea id="outputA" class="form-control" rows="1" readonly placeholder="Input Cubed"></textarea>
-            <textarea id="outputB" class="form-control" rows="2" readonly placeholder="Cubes of Range 1-20"></textarea>
+            <textarea id="outputB" class="form-control" rows="2" readonly placeholder="Cubes of range(1,21)"></textarea>
         </div>
     </div>
     <div class="row">

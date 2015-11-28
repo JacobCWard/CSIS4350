@@ -1,0 +1,54 @@
+---
+layout: bootstrappypage
+title:  "Week 02-04"
+categories: week02
+permalink: /week02/04/
+---
+
+<script type="text/javascript" src="{{ "/scripts/week02.js" | prepend: site.baseurl }}"></script>
+
+<div class="row">
+    <div class="col-md-12">
+        <h4><a href="../">Week 2 Index</a></h4>
+        <h1>Week 02 - 04</h1>
+        <h2>Write a function that computes the product of all elements in an array.  Then test it on the range(73,100).</h2>
+    </div>
+</div>
+<div class="well">
+    <div class="row">
+        <div class="col-sm-5">
+            <textarea id="inputA" class="form-control" rows="3" placeholder="Input">[3,5,4,-2,-3]</textarea>
+        </div>
+        <div class="col-sm-2" style="min-height:46px;">
+            <a class="btn btn-primary col-xs-12" id="buttonA" href="javascript:void(0); "role="button" onclick="document.getElementById('outputA').value = array_product(document.getElementById('inputA').value)">array_product()</a>
+            <a class="btn btn-primary col-xs-12" id="buttonB" href="javascript:void(0); "role="button" onclick="document.getElementById('outputB').value = array_product_test()">range(73,100)</a>
+        </div>
+        <div class="col-sm-5">
+            <textarea id="outputA" class="form-control" rows="1" readonly placeholder="Output"></textarea>
+            <textarea id="outputB" class="form-control" rows="1" readonly placeholder="array_product_test()"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5><code>array_product(input)</code></h5>
+            {% highlight js linenos %}
+function array_product(input) {
+    var product = 1;
+    for (i in input){
+        product *= input[i];
+    }
+    return product;
+}
+            {% endhighlight %}
+        </div>
+        <div class="col-sm-6">
+            <h5><code>array_product_test()</code></h5>
+            {% highlight js linenos %}
+function array_product_test(){
+    arr = _.range(73,100);
+    return array_product(arr);
+}
+            {% endhighlight %}
+        </div>
+    </div>
+</div>

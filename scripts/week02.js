@@ -1,11 +1,17 @@
+/*
+*   Helper functions for parsing input from textarea.
+*/
 function parse_array(tmp){
-    tmp = tmp.replace('[','');
-    tmp = tmp.replace(']','');
-    var arr = tmp.split(",");
-    for (a in arr) {
-        arr[a] = parseInt(arr[a], 10);
+    if (typeof(tmp)==="string"){
+        tmp = tmp.replace('[','');
+        tmp = tmp.replace(']','');
+        var arr = tmp.split(",");
+        for (a in arr) {
+            arr[a] = parseInt(arr[a], 10);
+        }
+        return arr;
     }
-    return arr;
+    return tmp;
 }
 
 function parse_array_mult(tmp) {
@@ -17,6 +23,9 @@ function parse_array_mult(tmp) {
     return arr;
 }
 
+/*
+*   Functions given in assignment
+*/
 function no_zeros(input){
     input = parse_array(input);
     var rm = new Array();
@@ -63,9 +72,8 @@ function tst_name(input) {
     return false;
 }
 
-function row_averages(inputA) {
-    var input = new Array();
-    input = parse_array_mult(inputA);
+function row_averages(input) {
+    input = parse_array_mult(input);
     var arr = new Array();
     for (i in input) {
         var k = 0;
@@ -83,6 +91,22 @@ function cube(x) {
     return c;
 }
 
+function capitalizeAll(input){
+    return input.toUpperCase();
+}
+
+function array_product(input) {
+    input = parse_array(input);
+    var product = 1;
+    for (i in input){
+        product *= input[i];
+    }
+    return product;
+}
+
+/*
+*   Testing Functions
+*/
 function cube_range() {
     arr = _.range(1,21);
     cubes = new Array();
@@ -93,6 +117,7 @@ function cube_range() {
     return cubes;
 }
 
-function capitalizeAll(input){
-    return input.toUpperCase();
+function array_product_test(){
+    arr = _.range(73,100);
+    return array_product(arr);
 }
