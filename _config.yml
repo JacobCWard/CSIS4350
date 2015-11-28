@@ -22,4 +22,4 @@ linkedin_username: JacobCWard
 # Build settings
 markdown: redcarpet
 redcarpet:
-  extensions: ["strikethrough"] 
+  extensions: ["strikethrough"]
