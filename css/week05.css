@@ -1,0 +1,19 @@
+table{
+    border: 1px solid #777;
+}
+
+th, td{
+    width: 100px;
+}
+
+table{
+    border-radius: 10px;
+}
+
+#table-container{
+    display: none;
+}
+
+#hide-button{
+    display: none;
+}
