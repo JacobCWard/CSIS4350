@@ -1,0 +1,53 @@
+---
+layout: bootstrappypage
+title:  "Week 06-03"
+categories: week06
+permalink: /week06/03/
+---
+
+<div class="row">
+    <div class="col-md-12">
+        <h4><a href="../">Week 6 Index</a></h4>
+        <h1>Week 06 - 03</h1>
+        <div class="well">
+            <h2>In your own html page, illustrate the following jQuery methods: <code>hide()</code>, <code>show()</code>, <code>fadeIn()</code>, <code>fadeOut()</code>, <code>slideDown()</code>, <code>slideUp()</code>, <code>animate()</code>.</h2>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-3">
+        <div class="well">
+            <a href="javascript:void(0);" onclick="$('#bearLake').hide()" class="btn btn-block btn-default" role="button"><code>hide()</code></a>
+            <a href="javascript:void(0);" onclick="$('#bearLake').show()" class="btn btn-block btn-default" role="button"><code>show()</code></a>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="well">
+            <a href="javascript:void(0);" onclick="$('#bearLake').fadeOut()" class="btn btn-block btn-default" role="button"><code>fadeOut()</code></a>
+            <a href="javascript:void(0);" onclick="$('#bearLake').fadeIn()" class="btn btn-block btn-default" role="button"><code>fadeIn()</code></a>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="well">
+            <a href="javascript:void(0);" onclick="$('#bearLake').slideUp()" class="btn btn-block btn-default" role="button"><code>slideUp()</code></a>
+            <a href="javascript:void(0);" onclick="$('#bearLake').slideDown()" class="btn btn-block btn-default" role="button"><code>slideDown()</code></a>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="well">
+            <a href="javascript:void(0);" onclick="myAnimation()" class="btn btn-block btn-default" role="button"><code>animate()</code></a>
+            <a href="javascript:void(0);" onclick="reset()" class="btn btn-block btn-default" role="button">Reset</a>
+        </div>
+    </div>
+</div>
+<img id="bearLake" style="width:100%; position:relative;" src="../../images/week06/bearlake.png">
+
+<script type="text/javascript">
+function myAnimation() {
+    $('#bearLake').animate({'width': '50%', 'left': '25%', 'opacity': '0.75'}, 5000, function() {});
+}
+function reset(argument) {
+    $('#bearLake').css({'width': '100%', 'display': 'block', 'left': '0px', 'opacity': '1'})
+}
+
+</script>
