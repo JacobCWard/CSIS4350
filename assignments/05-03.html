@@ -1,0 +1,64 @@
+---
+layout: bootstrappypage
+title:  "Week 05-03"
+categories: week03
+permalink: /week05/03/
+---
+
+<div class="row">
+    <div class="col-md-12">
+        <h4><a href="../">Week 5 Index</a></h4>
+        <h1>Week 05 - 03</h1>
+        <div class="well">
+            <h2>Using the w3schools events page as a reference, create a web page that illustrates these events: ondblclick, onmouseover, onkeypress, onselect as well as these methods: screenX and screenY.</h2>
+        </div>
+    </div>
+</div>
+<div class="well" style="position: " id="testDiv" onclick="where_is(event)" ondblclick="dbl_click()" onmouseover="mouse_over()">
+    <h3 id="myTitle">This Div is <code>#testDiv</code>.</h3>
+    <h4>Double-click to change the color of the text in this div.</h4>
+    <dl class="dl-horizontal">
+        <dt>ondblclick</dt>
+        <dd><code>$('#testDiv').css({'color': '#098'});</code></dd>
+        <dt>onmouseover</dt>
+        <dd><code>$('#testDiv').css({'background-color': '#abc'});</code></dd>
+        <dt>onkeypress</dt>
+        <dd><code>$('#testDiv').css({'width': '75%'});</code></dd>
+        <dt>onselect</dt>
+        <dd><code>$('#textBox').css({'text-align': 'right'});</code></dd>
+    </dl>
+    <div class="form-group">
+        <label for="textBox">Stuff</label>
+        <input type="text" class="form-control" id="textBox" onselect="select_div()" onkeypress="key_press()" value="Select this text to make something happen. Type something here to get something else to happen.">
+    </div>
+    <p>You clicked at X:<span id="xLoc"></span> Y:<span id="yLoc"></span></p>
+    <p><code>screenX</code> and <code>screenY</code> are demonstrated by an <code>onclick</code> event inside this div.</p>
+    {% highlight js linenos %}
+    function where_is(event) {
+        var x = event.screenX;
+        var y = event.screenY;
+        $('#xLoc').html(x);
+        $('#yLoc').html(y);
+    }
+    {% endhighlight %}
+</div>
+<script type="text/javascript">
+function dbl_click() {
+    $('#testDiv').css({'color': '#5D5A97'});
+}
+function mouse_over() {
+    $('#testDiv').css({'background-color': '#abc'});
+}
+function key_press() {
+    $('#testDiv').css({'width': '75%'});
+}
+function select_div() {
+    $('#textBox').css({'text-align': 'right'});
+}
+function where_is(event) {
+    var x = event.screenX;
+    var y = event.screenY;
+    $('#xLoc').html(x);
+    $('#yLoc').html(y);
+}
+</script>
