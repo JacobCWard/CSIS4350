@@ -1,0 +1,75 @@
+---
+layout: bare
+title:  "Task list"
+categories: week06
+permalink: /week06/01/tasks.html
+---
+
+<h2 style="float: left;"><a href="../">Week 6 Index</a></h2><br>
+<p>Illustrate the following jQuery methods using the “tasks.html” file given in class (w3schools has simple examples of their use).</p><br>
+<p>text(), html(), al(), attire(), append(), after(), before(), addClass(), css() to return a css property, css() to set a css property, width(), height()</p>
+<br>
+<header>
+	<span>Task list</span>
+</header>
+<main>
+	<section>
+		<form>
+			<div>
+				<label>Task</label> <input type="text" required="required"
+				name="task" class="large" placeholder="Breakfast" />
+			</div>
+			<div>
+				<label>Required by</label> <input type="date" required="required"
+				name="requiredBy" />
+			</div>
+			<div>
+				<label>Category</label> <select name="category">
+					<option value="Personal">Personal</option>
+					<option value="Work">Work</option>
+				</select>
+			</div>
+			<nav>
+				<a href="#">Save task</a> <a href="#">Clear task</a>
+			</nav>
+		</form>
+	</section>
+	<section>
+		<table id="tblTasks">
+			<colgroup>
+				<col width="50%">
+				<col width="25%">
+				<col width="25%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Due</th>
+					<th>Category</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Return library books</td>
+					<td><time datetime="2015-10-14">2015-10-14</time></td>
+					<td>Personal</td>
+				</tr>
+				<tr class="even">
+					<td>Perform project demo to stakeholders</td>
+					<td><time datetime="2015-10-14">2015-10-14</time></td>
+					<td>Work</td>
+				</tr>
+				<tr>
+					<td>Meet friends for dinner</td>
+					<td><time datetime="2015-10-15">2015-10-14</time></td>
+					<td>Personal</td>
+				</tr>
+			</tbody>
+		</table>
+		<nav>
+			<a href="#">Add task</a>
+		</nav>
+	</section>
+</main>
+<footer>You have 3 tasks</footer>
+<script type="text/javascript" src="../../scripts/06-01.js"></script>
