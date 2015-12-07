@@ -12,11 +12,11 @@ permalink: /week06/02/
         <div class="well">
             <h2>Write an endless loop that adds a video element to a webpage every 5 seconds.</h2>
             {% highlight js linenos %}
-            var intervalID = window.setInterval(add_vid, 5000);
+            var intervalID = window.setInterval(addVid, 5000);
 function addVid() {
     $('#many-videos').append('<div class="col-sm-4">'+
-        '<div class="well never-gonna-give-you-up">'+
-            '<video c class="img-responsive" src="http://jacobcward.com/Rick Astley - Never Gonna Give You Up.mp4" controls/>'+
+        '<div class="well yaaas">'+
+            '<video class="img-responsive" src="../../images/yaaas-cat.mp4" autoplay loop controls/>'+
         '</div>'+
     '</div>');
 }
@@ -26,18 +26,18 @@ function addVid() {
 </div>
 <div class="row" id="many-videos">
     <div class="col-sm-4">
-        <div class="well never-gonna-give-you-up">
-            <video class="img-responsive" src="http://jacobcward.com/Rick Astley - Never Gonna Give You Up.mp4" autoplay controls/>
+        <div class="well yaaas">
+            <video class="img-responsive" src="../../images/yaaas-cat.mp4" autoplay loop controls/>
         </div>
     </div>
 </div>
 
 <script type="text/javascript">
-var intervalID = window.setInterval(add_vid, 5000);
+var intervalID = window.setInterval(addVid, 5000);
 function addVid() {
     $('#many-videos').append('<div class="col-sm-4">'+
-    '<div class="well never-gonna-give-you-up">'+
-    '<video c class="img-responsive" src="http://jacobcward.com/Rick Astley - Never Gonna Give You Up.mp4" controls/>'+
+    '<div class="well yaaas">'+
+    '<video class="img-responsive" src="../../images/yaaas-cat.mp4" autoplay loop controls/>'+
     '</div>'+
     '</div>');
 }
