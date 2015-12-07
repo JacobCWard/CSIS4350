@@ -1,0 +1,58 @@
+---
+layout: bootstrappypage
+title:  "Week 05-04"
+categories: week04
+permalink: /week05/04/
+---
+
+<div class="row">
+    <div class="col-md-12">
+        <h4><a href="../">Week 5 Index</a></h4>
+        <h1>Week 05 - 04</h1>
+        <div class="well">
+            <h2>Create a short demo that illustrates the difference between the display and visibility properties of css, using the Saturn image we used in class.</h2>
+        </div>
+    </div>
+</div>
+<h3>Both black borders contain the Saturn image.</h3>
+<p>
+    <input type="radio" name="r1" onchange="dispNone()"/>Stuff
+    <input type="radio" checked name="r1" onchange="dispBlock()"/>Other
+</p>
+<div class="well" id='radiobutton'>
+    <h2>Radio Button</h2>
+    <p>Which comes third?</p>
+    <div class="radio">
+        <label>
+            <input type="radio" name="dispNone" onchange="dispNone()">
+            <code>display: none;</code>
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="dispBlock" onchange="dispBlock()">
+            <code>display: block;</code>
+        </label>
+    </div>
+</div>
+<p><code>display: none;</code></p>
+<div style="border: 5px solid black">
+    <img id="visibleImage" src="../../images/week05/saturn.png">
+</div>
+<br>
+<p><code>visibility: hidden;</code></p>
+<div style="border: 5px solid black">
+    <img id="displayImage" src="../../images/week05/saturn.png">
+</div>
+<script type="text/javascript">
+function dispNone(){
+    $('#displayImage').css({'display': 'none'});
+}
+function dispBlock(){
+    $('#displayImage').css({'display': 'block'});
+}
+function show2(sign){
+    document.getElementById('sh2').style.display = 'block';
+    document.getElementById('sh1').style.display = 'none';
+}
+</script>
