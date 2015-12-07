@@ -14,45 +14,54 @@ permalink: /week05/04/
         </div>
     </div>
 </div>
-<h3>Both black borders contain the Saturn image.</h3>
-<p>
-    <input type="radio" name="r1" onchange="dispNone()"/>Stuff
-    <input type="radio" checked name="r1" onchange="dispBlock()"/>Other
-</p>
-<div class="well" id='radiobutton'>
-    <h2>Radio Button</h2>
-    <p>Which comes third?</p>
+<div class="well">
+    <h3>Display</h3>
     <div class="radio">
         <label>
-            <input type="radio" name="dispNone" onchange="dispNone()">
+            <input type="radio" name="disp" onchange="dispNone()">
             <code>display: none;</code>
         </label>
     </div>
     <div class="radio">
         <label>
-            <input type="radio" name="dispBlock" onchange="dispBlock()">
+            <input type="radio" checked name="disp" onchange="dispBlock()">
             <code>display: block;</code>
         </label>
     </div>
-</div>
-<p><code>display: none;</code></p>
-<div style="border: 5px solid black">
-    <img id="visibleImage" src="../../images/week05/saturn.png">
-</div>
-<br>
-<p><code>visibility: hidden;</code></p>
-<div style="border: 5px solid black">
     <img id="displayImage" src="../../images/week05/saturn.png">
 </div>
+<div class="well">
+    <h3>Visibility <small>Note that the image still takes up space.</small></h3>
+    <div class="radio">
+        <label>
+            <input type="radio" name="visible" onchange="visibleHidden()">
+            <code>visibility: hidden;</code>
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" checked name="visible" onchange="visibleVisible()">
+            <code>visibility: visible;</code>
+        </label>
+    </div>
+    <img id="visibilityImage" src="../../images/week05/saturn.png">
+</div>
+
 <script type="text/javascript">
+function visibleHidden(){
+    console.log('hidden');
+    $('#visibilityImage').css({'visibility': 'hidden'});
+}
+function visibleVisible(){
+    console.log('visible');
+    $('#visibilityImage').css({'visibility': 'visible'});
+}
 function dispNone(){
+    console.log('none');
     $('#displayImage').css({'display': 'none'});
 }
 function dispBlock(){
+    console.log('block');
     $('#displayImage').css({'display': 'block'});
-}
-function show2(sign){
-    document.getElementById('sh2').style.display = 'block';
-    document.getElementById('sh1').style.display = 'none';
 }
 </script>
