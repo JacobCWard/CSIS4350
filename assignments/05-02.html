@@ -1,0 +1,45 @@
+---
+layout: bootstrappypage
+title:  "Week 05-02"
+categories: week02
+permalink: /week05/02/
+---
+
+<div class="row">
+    <div class="col-md-12">
+        <h4><a href="../">Week 5 Index</a></h4>
+        <h1>Week 05 - 02</h1>
+        <div class="well">
+            <h2>To the picture page we wrote today, add appropriate text boxes and labels which allow the client to enter the position of the upper left hand corner of the picture. Add an event handler that moves the picture to the appropriate position.</h2>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="well">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="xPosition">X Position</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="xPosition" value="-50">
+                        <div class="input-group-addon">px</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="yPosition">Y Position</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="yPosition" value="-125">
+                        <div class="input-group-addon">px</div>
+                    </div>
+                </div>
+                <a class="btn btn-primary" id="buttonA" href="javascript:void(0);" role="button" onclick="movePic()">Move</a>
+            </form>
+        </div>
+    </div>
+</div>
+<img id="saturnImage" src="../../images/week05/saturn.png" style="position: relative; top: 0; left: 0; z-index: -1;">
+<script type="text/javascript">
+function movePic() {
+    $('#saturnImage').css({'top': ($('#yPosition').val() + 'px'), 'left': ($('#xPosition').val() + 'px')});
+}
+</script>
