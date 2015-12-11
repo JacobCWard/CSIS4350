@@ -4,14 +4,44 @@
     <title>11-02</title>
 </head>
 <body>
+    <p>This definitly works on OS X. Not tested on Windows or Linux</p>
+    <p>I only have it looking in the local directory rather than the whole server because my computer has far to many images on it for the page to load efficiently. If one wanted to search the entire system, they would replace the '.' in the system command with a '/'. You could also put any other file path in that location to search from there.</p>
+    <p>Any file paths with ' ' [space] characters in them should have the spaces replaced with '%20'.</p>
+    <form action="#" method="post">
+        <input type="text" name="filename" maxlength="300"/>
+        <input type="submit" name="submit" value="Display" />
+    </form>
+    <?php
+    if(PHP_OS == 'Darwin'){
+        system("find . -type f -name '*.jpg'");
+    }
+    if(PHP_OS == 'Linux'){
+        system("find . -type f -name '*.jpg'");
+    }
+    if(PHP_OS == 'WIN'){
+        system("dir *.jpg/b/s");
+    }
 
-<h3><a href="http://jacobcward.com/CSIS4350/week09/">Week 11 Home</a></h3>
-<h1>11-02</h1>
-<h2>Write a php file that searches for all the image files on the server and prints their paths to the screen. It should have a textbox and submit button at the bottom. When the user selects an image and pastes its path into the textbox and hits the submit button, the image is displayed. (Hint: here’s a windows command that finds all jpeg files: dir *.jpg /b/s).</h2>
+    if(isset($_POST['submit'])){
+        $select = ($_POST['filename']);
+        echo '<img style="max-width:100%" src="', $select, '"/>';
+    }
+    ?>
+    <pre>
+        if(PHP_OS == 'Darwin'){
+            system("find . -type f -name '*.jpg'");
+        }
+        if(PHP_OS == 'Linux'){
+            system("find . -type f -name '*.jpg'");
+        }
+        if(PHP_OS == 'WIN'){
+            system("dir *.jpg/b/s");
+        }
 
-<?php
-echo "Hello World!";
-?>
-
+        if(isset($_POST['submit'])){
+            $select = ($_POST['filename']);
+            echo '&lt;img style="max-width:100%" src="', $select, '"/&gt;';
+        }
+    </pre>
 </body>
 </html>
