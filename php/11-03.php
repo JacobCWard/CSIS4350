@@ -7,10 +7,10 @@
 
 <h3><a href="http://jacobcward.com/CSIS4350/week09/">Week 11 Home</a></h3>
 <h1>11-03</h1>
-<h2>Illustrate these php commands: dates, require, readfile, fopen, fread, fgets, fwrite.</h2>
+<h2>Illustrate these php commands: date, require, readfile, fopen, fread, fgets, fwrite.</h2>
 
 <?php
-echo "Hello World!";
+echo date();
 ?>
 
 </body>
